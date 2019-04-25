@@ -36,6 +36,15 @@ public class ApiExceptionHandler {
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 
+    @SuppressWarnings("rawtypes")
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ErrorItem> handle(ResourceNotFoundException e) {
+        ErrorItem error = new ErrorItem();
+        error.setMessage(e.getMessage());
+
+        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+    }
+
     public static class ErrorItem {
 
         @JsonInclude(JsonInclude.Include.NON_NULL)
