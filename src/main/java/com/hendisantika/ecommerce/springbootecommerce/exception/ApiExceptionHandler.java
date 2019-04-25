@@ -3,6 +3,9 @@ package com.hendisantika.ecommerce.springbootecommerce.exception;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by IntelliJ IDEA.
  * Project : springboot-ecommerce
@@ -36,6 +39,24 @@ public class ApiExceptionHandler {
 
         public void setMessage(String message) {
             this.message = message;
+        }
+
+    }
+
+    public static class ErrorResponse {
+
+        private List<ErrorItem> errors = new ArrayList<>();
+
+        public List<ErrorItem> getErrors() {
+            return errors;
+        }
+
+        public void setErrors(List<ErrorItem> errors) {
+            this.errors = errors;
+        }
+
+        public void addError(ErrorItem error) {
+            this.errors.add(error);
         }
 
     }
