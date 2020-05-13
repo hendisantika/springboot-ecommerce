@@ -13,12 +13,14 @@ export class EcommerceService {
   private orders: ProductOrders = new ProductOrders();
 
   private productOrderSubject = new Subject();
-  ProductOrderChanged = this.productOrderSubject.asObservable();
   private ordersSubject = new Subject();
-  OrdersChanged = this.ordersSubject.asObservable();
   private totalSubject = new Subject();
-  TotalChanged = this.totalSubject.asObservable();
+
   private total: number;
+
+  ProductOrderChanged = this.productOrderSubject.asObservable();
+  OrdersChanged = this.ordersSubject.asObservable();
+  TotalChanged = this.totalSubject.asObservable();
 
   constructor(private http: HttpClient) {
   }
@@ -31,4 +33,30 @@ export class EcommerceService {
     return this.http.post(this.ordersUrl, order);
   }
 
+  get SelectedProductOrder() {
+    return this.productOrder;
+  }
+
+  set SelectedProductOrder(value: ProductOrder) {
+    this.productOrder = value;
+    this.productOrderSubject.next();
+  }
+
+  get ProductOrders() {
+    return this.orders;
+  }
+
+  set ProductOrders(value: ProductOrders) {
+    this.orders = value;
+    this.ordersSubject.next();
+  }
+
+  get Total() {
+    return this.total;
+  }
+
+  set Total(value: number) {
+    this.total = value;
+    this.totalSubject.next();
+  }
 }
