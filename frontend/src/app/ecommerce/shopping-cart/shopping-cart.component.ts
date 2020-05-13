@@ -2,6 +2,7 @@ import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core'
 import {ProductOrders} from "../models/product-orders.model";
 import {Subscription} from "rxjs";
 import {EcommerceService} from "../services/ecommerce.service";
+import {ProductOrder} from "../models/product-order.model";
 
 @Component({
   selector: 'app-shopping-cart',
@@ -28,6 +29,24 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
     this.loadTotal();
   }
 
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+
+  finishOrder() {
+    this.orderFinished = true;
+    this.ecommerceService.Total = this.total;
+    this.onOrderFinished.emit(this.orderFinished);
+  }
+
+  reset() {
+    this.orderFinished = false;
+    this.orders = new ProductOrders();
+    this.orders.productOrders = []
+    this.loadTotal();
+    this.total = 0;
+  }
+
   loadTotal() {
     this.sub = this.ecommerceService.OrdersChanged.subscribe(() => {
       this.total = this.calculateTotal(this.orders.productOrders);
@@ -47,7 +66,11 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy() {
-    this.sub.unsubscribe();
+  private calculateTotal(products: ProductOrder[]): number {
+    let sum = 0;
+    products.forEach(value => {
+      sum += (value.product.price * value.quantity);
+    });
+    return sum;
   }
 }
