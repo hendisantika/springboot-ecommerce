@@ -32,4 +32,10 @@ export class OrdersComponent implements OnInit {
     this.ecommerceService.saveOrder(this.orders).subscribe();
   }
 
+
+  loadTotal() {
+    this.sub = this.ecommerceService.TotalChanged.subscribe(() => {
+      this.total = this.ecommerceService.Total;
+    });
+  }
 }
