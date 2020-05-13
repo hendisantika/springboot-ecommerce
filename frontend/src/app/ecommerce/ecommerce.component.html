@@ -19,3 +19,16 @@
     </div>
   </div>
 </nav>
+
+<div class="row">
+  <div class="col-md-9">
+    <app-products #productsC [hidden]="orderFinished"></app-products>
+  </div>
+  <div class="col-md-3">
+    <app-shopping-cart #shoppingCartC (onOrderFinished)=finishOrder($event)
+                       [hidden]="orderFinished"></app-shopping-cart>
+  </div>
+  <div class="col-md-6 offset-3">
+    <app-orders #ordersC [hidden]="!orderFinished"></app-orders>
+  </div>
+</div>
