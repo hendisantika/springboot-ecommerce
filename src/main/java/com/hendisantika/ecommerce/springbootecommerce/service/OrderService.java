@@ -1,10 +1,9 @@
 package com.hendisantika.ecommerce.springbootecommerce.service;
 
 import com.hendisantika.ecommerce.springbootecommerce.model.Order;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 /**
  * Created by IntelliJ IDEA.
@@ -18,7 +17,8 @@ import javax.validation.constraints.NotNull;
 @Validated
 public interface OrderService {
 
-    @NotNull Iterable<Order> getAllOrders();
+    @NotNull
+    Iterable<Order> getAllOrders();
 
     Order create(@NotNull(message = "The order cannot be null.") @Valid Order order);
 

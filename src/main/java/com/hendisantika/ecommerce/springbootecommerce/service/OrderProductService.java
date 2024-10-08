@@ -1,10 +1,9 @@
 package com.hendisantika.ecommerce.springbootecommerce.service;
 
 import com.hendisantika.ecommerce.springbootecommerce.model.OrderProduct;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 /**
  * Created by IntelliJ IDEA.

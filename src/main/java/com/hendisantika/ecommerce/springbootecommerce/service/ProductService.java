@@ -1,10 +1,9 @@
 package com.hendisantika.ecommerce.springbootecommerce.service;
 
 import com.hendisantika.ecommerce.springbootecommerce.model.Product;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;
-
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 
 /**
  * Created by IntelliJ IDEA.
@@ -18,7 +17,8 @@ import javax.validation.constraints.NotNull;
 @Validated
 public interface ProductService {
 
-    @NotNull Iterable<Product> getAllProducts();
+    @NotNull
+    Iterable<Product> getAllProducts();
 
     Product getProduct(@Min(value = 1L, message = "Invalid product ID.") long id);
 
