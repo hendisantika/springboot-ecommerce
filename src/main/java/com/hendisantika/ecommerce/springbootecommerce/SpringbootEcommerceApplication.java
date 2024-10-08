@@ -28,7 +28,7 @@ public class SpringbootEcommerceApplication {
             productService.save(new Product(5L, "Marjan", 3.00, "https://ecs7.tokopedia" +
                     ".net/img/cache/700/product-1/2018/10/18/4395737/4395737_869adbbe-e65e-4491-82eb" +
                     "-7f66cce49488_394_394.jpg"));
-            productService.save(new Product(6L, "iPhone 11X", 500.00, "https://www.concept-phones" +
+            productService.save(new Product(6L, "iPhone 16 Pro Max", 500.00, "https://www.concept-phones" +
                     ".com/wp-content/uploads/2019/08/iPhone-11X-concept-phone-Hasan-Kaymak-1.jpg"));
             productService.save(new Product(7L, "Watch", 30.00, "https://p.ipricegroup" +
                     ".com/uploaded_16689895db8e5bf4e35f115583693d64.jpg"));

@@ -61,15 +61,17 @@ public class EcommerceApplicationIntegrationTest {
         Iterable<Product> products = responseEntity.getBody();
         Assertions
                 .assertThat(products)
-                .hasSize(7);
+                .hasSize(9);
 
-        assertThat(products, hasItem(hasProperty("name", is("TV Set"))));
+        assertThat(products, hasItem(hasProperty("name", is("Samsung TV Set"))));
         assertThat(products, hasItem(hasProperty("name", is("Game Console"))));
         assertThat(products, hasItem(hasProperty("name", is("Sofa"))));
-        assertThat(products, hasItem(hasProperty("name", is("Icecream"))));
-        assertThat(products, hasItem(hasProperty("name", is("Beer"))));
-        assertThat(products, hasItem(hasProperty("name", is("Phone"))));
+        assertThat(products, hasItem(hasProperty("name", is("Ice Cream"))));
+        assertThat(products, hasItem(hasProperty("name", is("Marjan"))));
+        assertThat(products, hasItem(hasProperty("name", is("iPhone 16 Pro Max"))));
         assertThat(products, hasItem(hasProperty("name", is("Watch"))));
+        assertThat(products, hasItem(hasProperty("name", is("MI TV Set"))));
+        assertThat(products, hasItem(hasProperty("name", is("Brompton"))));
     }
 
 //    @Test
