@@ -1,9 +1,12 @@
 package com.hendisantika.ecommerce.springbootecommerce.service;
 
+import com.hendisantika.ecommerce.springbootecommerce.dto.OrderProductDto;
 import com.hendisantika.ecommerce.springbootecommerce.model.Order;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;
+
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -23,4 +26,6 @@ public interface OrderService {
     Order create(@NotNull(message = "The order cannot be null.") @Valid Order order);
 
     void update(@NotNull(message = "The order cannot be null.") @Valid Order order);
+
+    Order createOrderWithProducts(List<OrderProductDto> productOrders);
 }
