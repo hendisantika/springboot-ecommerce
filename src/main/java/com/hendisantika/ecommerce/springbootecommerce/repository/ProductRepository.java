@@ -1,6 +1,7 @@
 package com.hendisantika.ecommerce.springbootecommerce.repository;
 
 import com.hendisantika.ecommerce.springbootecommerce.model.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -12,5 +13,5 @@ import org.springframework.data.repository.CrudRepository;
  * Date: 2019-04-26
  * Time: 06:13
  */
-public interface ProductRepository extends CrudRepository<Product, Long> {
+public interface ProductRepository extends JpaRepository<Product, Long> {
 }

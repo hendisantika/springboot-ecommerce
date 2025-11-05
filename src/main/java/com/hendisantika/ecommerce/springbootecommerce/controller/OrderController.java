@@ -71,17 +71,14 @@ public class OrderController {
         return new ResponseEntity<>(order, headers, HttpStatus.CREATED);
     }
 
-    private void validateProductsExistence(List<OrderProductDto> orderProducts) {
-        List<OrderProductDto> list = orderProducts
-                .stream()
-                .filter(op -> Objects.isNull(productService.getProduct(op
-                        .getProduct()
-                        .getId())))
-                .collect(Collectors.toList());
+    private void validate(List<OrderProductDto> orderProducts) {
+
+        List<OrderProductDto> list = productService.validateProductsExistence(orderProducts);
 
         if (!CollectionUtils.isEmpty(list)) {
-            new ResourceNotFoundException("Product not found");
+           throw new ResourceNotFoundException("Product not found");
         }
+
     }
 
     public static class OrderForm {

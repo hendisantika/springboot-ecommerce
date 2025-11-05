@@ -1,9 +1,12 @@
 package com.hendisantika.ecommerce.springbootecommerce.service;
 
+import com.hendisantika.ecommerce.springbootecommerce.dto.OrderProductDto;
 import com.hendisantika.ecommerce.springbootecommerce.model.Product;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;
+
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,6 +19,8 @@ import org.springframework.validation.annotation.Validated;
  */
 @Validated
 public interface ProductService {
+
+    List<OrderProductDto> validateProductsExistence(List<OrderProductDto> orderProducts);
 
     @NotNull
     Iterable<Product> getAllProducts();
