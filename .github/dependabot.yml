@@ -7,7 +7,7 @@ updates:
       time: '05:00'
       timezone: Asia/Jakarta
     open-pull-requests-limit: 10
- - package-ecosystem: npm
+  - package-ecosystem: bun
     directory: "/frontend"
     schedule:
       interval: daily
