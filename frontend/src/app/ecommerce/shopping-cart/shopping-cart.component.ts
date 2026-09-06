@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {ProductOrders} from "../models/product-orders.model";
 import {Subscription} from "rxjs";
 import {EcommerceService} from "../services/ecommerce.service";
@@ -6,14 +7,15 @@ import {ProductOrder} from "../models/product-order.model";
 
 @Component({
   selector: 'app-shopping-cart',
+  imports: [CommonModule],
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit, OnDestroy {
   orderFinished: boolean;
-  orders: ProductOrders;
+  orders!: ProductOrders;
   total: number;
-  sub: Subscription;
+  sub!: Subscription;
 
   @Output() onOrderFinished: EventEmitter<boolean>;
 
@@ -30,7 +32,7 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.sub.unsubscribe();
+    this.sub?.unsubscribe();
   }
 
   finishOrder() {

@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 import {ProductOrder} from "../models/product-order.model";
 import {EcommerceService} from "../services/ecommerce.service";
 import {Subscription} from "rxjs";
@@ -7,6 +9,7 @@ import {Product} from "../models/product.model";
 
 @Component({
   selector: 'app-products',
+  imports: [CommonModule, FormsModule],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
@@ -14,9 +17,9 @@ export class ProductsComponent implements OnInit {
 
   productOrders: ProductOrder[] = [];
   products: Product[] = [];
-  selectedProductOrder: ProductOrder;
-  private shoppingCartOrders: ProductOrders;
-  sub: Subscription;
+  selectedProductOrder!: ProductOrder;
+  private shoppingCartOrders!: ProductOrders;
+  sub!: Subscription;
   productSelected: boolean = false;
 
   constructor(private ecommerceService: EcommerceService) {
@@ -56,15 +59,15 @@ export class ProductsComponent implements OnInit {
 
   loadProducts() {
     this.ecommerceService.getAllProducts()
-      .subscribe(
-        (products: any[]) => {
+      .subscribe({
+        next: (products: Product[]) => {
           this.products = products;
           this.products.forEach(product => {
             this.productOrders.push(new ProductOrder(product, 0));
           })
         },
-        (error) => console.log(error)
-      );
+        error: (error) => console.log(error)
+      });
   }
 
   loadOrders() {

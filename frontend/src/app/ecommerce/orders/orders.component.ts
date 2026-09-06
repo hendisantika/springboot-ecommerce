@@ -1,19 +1,21 @@
 import {Component, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {EcommerceService} from "../services/ecommerce.service";
 import {Subscription} from "rxjs";
 import {ProductOrders} from "../models/product-orders.model";
 
 @Component({
   selector: 'app-orders',
+  imports: [CommonModule],
   templateUrl: './orders.component.html',
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
 
   orders: ProductOrders;
-  total: number;
-  paid: boolean;
-  sub: Subscription;
+  total!: number;
+  paid!: boolean;
+  sub!: Subscription;
 
   constructor(private ecommerceService: EcommerceService) {
     this.orders = this.ecommerceService.ProductOrders;
