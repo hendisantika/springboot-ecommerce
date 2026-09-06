@@ -13,7 +13,7 @@
   "dependencies": {
     "@angular/common": "^22.1.5",
     "@angular/compiler": "^22.1.5",
-    "@angular/core": "^21.2.0",
+    "@angular/core": "^22.1.5",
     "@angular/forms": "^22.1.5",
     "@angular/platform-browser": "^21.2.0",
     "@angular/router": "^22.1.5",

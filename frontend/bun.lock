@@ -7,7 +7,7 @@
       "dependencies": {
         "@angular/common": "^22.1.5",
         "@angular/compiler": "^22.1.5",
-        "@angular/core": "^21.2.0",
+        "@angular/core": "^22.1.5",
         "@angular/forms": "^22.1.5",
         "@angular/platform-browser": "^21.2.0",
         "@angular/router": "^22.1.5",
@@ -45,7 +45,7 @@
 
     "@angular/compiler-cli": ["@angular/compiler-cli@21.2.22", "", { "dependencies": { "@babel/core": "7.29.7", "@jridgewell/sourcemap-codec": "^1.4.14", "chokidar": "^5.0.0", "convert-source-map": "^1.5.1", "reflect-metadata": "^0.2.0", "semver": "^7.0.0", "tslib": "^2.3.0", "yargs": "^18.0.0" }, "peerDependencies": { "@angular/compiler": "21.2.22", "typescript": ">=5.9 <6.1" }, "optionalPeers": ["typescript"], "bin": { "ngc": "bundles/src/bin/ngc.js", "ng-xi18n": "bundles/src/bin/ng_xi18n.js" } }, "sha512-lbXXz8e8wCVecHNjb4kXiUPPNSrzZPE7WsQ+nNTEgnMDsFIqWJzmf3FagmNaZ5/wX1G2jnSZFjK4rpacmBIn4Q=="],
 
-    "@angular/core": ["@angular/core@21.2.22", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/compiler": "21.2.22", "rxjs": "^6.5.3 || ^7.4.0", "zone.js": "~0.15.0 || ~0.16.0" }, "optionalPeers": ["@angular/compiler", "zone.js"] }, "sha512-2pqDzm3T7/h7QF8XfDziVieEOZqNBM95qNgStM8vmJpFzhJEyLtD89xMQ0e365XcgaTOBEaMCWPswq6OuCIEUQ=="],
+    "@angular/core": ["@angular/core@22.1.5", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/compiler": "22.1.5", "rxjs": "^6.5.3 || ^7.4.0", "zone.js": "~0.15.0 || ~0.16.0" }, "optionalPeers": ["@angular/compiler", "zone.js"] }, "sha512-uiL+xVL4264NEuc3E5ILd6meSv9I4Xt82VQHvYlAVYlcjHlWY49yVe0/apzncUOGxUKzvK8/GDbyFEH7WfJYFw=="],
 
     "@angular/forms": ["@angular/forms@22.1.5", "", { "dependencies": { "@standard-schema/spec": "^1.0.0", "tslib": "^2.3.0", "zod": "^4.0.10" }, "peerDependencies": { "@angular/common": "22.1.5", "@angular/core": "22.1.5", "@angular/platform-browser": "22.1.5", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-E7pDEKtSvO1MNw222ZcvphzT4GAQ9D725v2Rq7ft8orT2qvHS6RlVnEc5ioPDhYTAD0HmbwDmutxkcuxqc16VA=="],
 
