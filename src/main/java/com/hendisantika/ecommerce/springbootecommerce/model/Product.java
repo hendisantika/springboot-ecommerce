@@ -38,6 +38,10 @@ public class Product {
         this.pictureUrl = pictureUrl;
     }
 
+    public Product(@NotNull(message = "Product name is required.") String name, Double price, String pictureUrl) {
+        this(null, name, price, pictureUrl);
+    }
+
     public Product() {
     }
 
