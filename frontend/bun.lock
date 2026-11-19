@@ -7,7 +7,7 @@
       "dependencies": {
         "@angular/common": "^22.2.5",
         "@angular/compiler": "^22.2.6",
-        "@angular/core": "^22.2.5",
+        "@angular/core": "^22.2.6",
         "@angular/forms": "^22.2.5",
         "@angular/platform-browser": "^22.2.6",
         "@angular/router": "^22.2.6",
@@ -45,7 +45,7 @@
 
     "@angular/compiler-cli": ["@angular/compiler-cli@22.2.6", "", { "dependencies": { "@babel/core": "8.0.1", "@jridgewell/sourcemap-codec": "^1.6.0", "chokidar": "^5.0.0", "convert-source-map": "^1.5.1", "reflect-metadata": "^0.2.0", "semver": "^7.0.0", "tslib": "^2.3.0", "yargs": "^18.0.0" }, "peerDependencies": { "@angular/compiler": "22.2.6", "typescript": ">=6.0 <6.1" }, "optionalPeers": ["typescript"], "bin": { "ngc": "bundles/src/bin/ngc.js", "ng-xi18n": "bundles/src/bin/ng_xi18n.js" } }, "sha512-9nNettf2g/BsgBLhDF65CAXqc97USoLynC3hkF6DwQxc1syzHQ5XOGpiHTp0YWPbe9/DKBQxOBOROVE0vhYMqw=="],
 
-    "@angular/core": ["@angular/core@22.2.5", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/compiler": "22.2.5", "rxjs": "^6.5.3 || ^7.4.0", "zone.js": "~0.15.0 || ~0.16.0" }, "optionalPeers": ["@angular/compiler", "zone.js"] }, "sha512-IW0zRxqii+otvrAlDRLhUF+cxSQvJsKy30Yiv2Fz2LXCI9da4bEnHhssNRrLYDz7Otkr4XKdHEXav/kFO5Hj3g=="],
+    "@angular/core": ["@angular/core@22.2.6", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/compiler": "22.2.6", "rxjs": "^6.5.3 || ^7.4.0", "zone.js": "~0.15.0 || ~0.16.0" }, "optionalPeers": ["@angular/compiler", "zone.js"] }, "sha512-atESNSPsM0dBXU88aDtByBP4W/wb8USbhL16lsePyxBvAWtM1Xn7QBB489QTmHpY6VCXHnqMhXWcrZsDpoIBsw=="],
 
     "@angular/forms": ["@angular/forms@22.2.5", "", { "dependencies": { "@standard-schema/spec": "^1.0.0", "tslib": "^2.3.0", "zod": "^4.0.10" }, "peerDependencies": { "@angular/common": "22.2.5", "@angular/core": "22.2.5", "@angular/platform-browser": "22.2.5", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-oQorgl0POezji2mSFIBhr0lscmnAFnV5jU3aLjOKwL1XsADS6+bQvaNjxGnW1qMkyZUvuhJcM2KlXpDrmI714w=="],
 
