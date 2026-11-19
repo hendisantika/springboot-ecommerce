@@ -17,7 +17,7 @@
     "@angular/forms": "^22.2.5",
     "@angular/platform-browser": "^22.2.6",
     "@angular/router": "^22.2.6",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.9",
     "rxjs": "~7.8.0",
     "tslib": "^2.9.1",
     "zone.js": "~0.16.3"
